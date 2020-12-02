@@ -10,5 +10,4 @@
 ## 8. Push to remote repository.
 ## Done! 
 ## Once we are happy with work done at some point, we merge develop into master. (master will keep only the 'release')
-#### Project done for DZC20 course, done in collaboration with:
-####
+#### Project is done for the final assignment of DZC20 course.
