@@ -10,4 +10,4 @@
 ## 8. Push to remote repository.
 ## Done! 
 ## Once we are happy with work done at some point, we merge develop into master. (master will keep only the 'release')
-#### Project is done for the final assignment of DZC20 course.
+#### Project is done for the final assignment of DZC20 course and together with Gabriela Zanova, Finn Ruijters, Nick Jeurissen, Ben de Jong.
