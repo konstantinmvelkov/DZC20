@@ -9,3 +9,5 @@
 ## 7. If the remote is some commits ahead, then pull and merge locally (resolve conflicts if there are any).
 ## 8. Push to remote repository.
 ## Done! 
+#### Project done for DZC20 course, done in collaboration with:
+####
