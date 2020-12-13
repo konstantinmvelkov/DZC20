@@ -11,11 +11,14 @@ public class CrystalHandler : MonoBehaviour
     public int TotalCrystals;
 
     Text text;
+    
+    //private Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
         text=GameObject.Find("CrystalScore").GetComponent<Text>();
+        //slider=GameObject.Find("CrystalSlider").GetComponent<Slider>();
         CrystalCount = 0;
         CrystalList = GameObject.FindGameObjectsWithTag("Crystal"); //List of active crystal gameobjects in scene
         TotalCrystals = CrystalList.Length; //Amount of active crystals at start of scene
@@ -31,6 +34,8 @@ public class CrystalHandler : MonoBehaviour
         //Debug.Log("Total crystals in scene: "+ TotalCrystals);
         //Debug.Log("Collected Crystals: "+ CrystalCount);
         text.text="Collected Crystals: "+CrystalCount.ToString()+" / "+ TotalCrystals.ToString();
+
+        //slider.value = (CrystalCount/TotalCrystals);
         
     }
 }
