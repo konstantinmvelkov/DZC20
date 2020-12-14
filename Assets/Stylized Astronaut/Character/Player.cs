@@ -60,22 +60,23 @@ public class Player : MonoBehaviour
             Vector3 startingPos = transform.position;
             Vector3 finalPos = transform.position + transform.forward;
             
-            Collider[] Intersecting = Physics.OverlapSphere(startingPos, 0.02f); // This detects intersecting objects including the plate that indicates stairs(>0.02f detects ground)
-            // Might have to change the value of 0.02f if we use a different model for the robot...
+            Collider[] Intersecting = Physics.OverlapSphere(startingPos, 0.1f); // This detects intersecting objects including the plate that indicates stairs
+            // Might have to change the value if we use a different model for the robot...
             
             if (Intersecting.Length != 0) //This is true if there are intersecting objects nearby, triggers, crystals etc..
             {
                 for (var i = 0; i < Intersecting.Length; i++) 
                 {
+                    Debug.Log(Intersecting[0].name);
                 if (Intersecting[i].tag == "StairsUp" && transform.eulerAngles == Intersecting[i].transform.eulerAngles) //Stairs up condition
                     {
                         finalPos = transform.position + transform.forward + 0.25f*transform.up; //Modify final pos to include height difference
-                        //Debug.Log(Intersecting[i].name);
+                        Debug.Log(Intersecting[i].name);
                     }
                 if (Intersecting[i].tag == "StairsDown" && transform.eulerAngles == Intersecting[i].transform.eulerAngles) //Stairs down condition
                     {
                         finalPos = transform.position + transform.forward - 0.25f*transform.up; //Modify final pos to include height difference
-                        // Debug.Log(Intersecting[i].name);
+                        Debug.Log(Intersecting[i].name);
                     }
                 }
                 
@@ -113,7 +114,7 @@ public class Player : MonoBehaviour
 
 
     }
-    private void HeightCheck()
+    private void HeightCheck() //not used right now
     {
         Debug.Log("Raycast script running");
         Vector3 origin = transform.position + 0.5f*transform.up;
