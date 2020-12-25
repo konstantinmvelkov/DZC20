@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ public class Entrypoint : MonoBehaviour
     public float gravity = 20.0f;
     public int interpolationFramesCount = 45; // Number of frames to completely interpolate between the 2 positions
 
-    bool hasentered = false;
+    bool hasentered = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,10 @@ public class Entrypoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x == 0 && transform.position.y == 0.5 && transform.position.z == -1)
+        {   
+            hasentered = false;
+        }
         if (hasentered == false)
         {
             anim.SetInteger("AnimationPar", 3);

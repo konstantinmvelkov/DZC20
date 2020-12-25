@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public bool UpLastTick = true;
     public bool DownLastTick = false;
 
-    List<string> movementList = new List<string>();
+    public List<string> movementList = new List<string>();
     void Start()
     {
         controller = GetComponent<CharacterController>();
