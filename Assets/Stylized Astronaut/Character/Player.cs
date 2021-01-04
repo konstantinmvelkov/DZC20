@@ -107,7 +107,11 @@ public class Player : MonoBehaviour
         stepCount++;
         anim.SetInteger("AnimationPar", 1);
         Vector3 startingPos = transform.position;
+
         Vector3 finalPos = transform.position + transform.forward;
+
+        Debug.Log(startingPos);
+        Debug.Log(finalPos);
 
         Collider[] Intersecting = Physics.OverlapSphere(startingPos, 0.1f); // This detects intersecting objects including the plate that indicates stairs
                                                                             // Might have to change the value if we use a different model for the robot...
@@ -133,12 +137,14 @@ public class Player : MonoBehaviour
 
         float elapsedTime = 0;
 
-        while (elapsedTime < time)
+        while (transform.position != finalPos)// elapsedTime < time)
         {
             transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        Debug.Log(transform.position);
+        Debug.Log(isTranslating);
         isTranslating = false;
         anim.SetInteger("AnimationPar", 0);
     }
