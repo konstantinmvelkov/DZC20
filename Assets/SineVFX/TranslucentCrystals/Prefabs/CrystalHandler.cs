@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CrystalHandler : MonoBehaviour
 {
+    public Animator anim;
     public int CrystalCount;
     GameObject[] CrystalList;
 
@@ -50,11 +51,48 @@ public class CrystalHandler : MonoBehaviour
         if (slider.value < slidervalue)
         {
             slider.value += FillSpeed * Time.deltaTime;
+            anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+            anim.SetInteger("AnimationPar", 2);
+            StartCoroutine(Pause(0.0000015f));
+
+
             //if (!particleSys.isPlaying)
             //{
             //    particleSys.Play();
             //}
+            
+            //StartCoroutine(Wait(0.3f));
         }
+
+        IEnumerator Pause(float p)
+        {
+            Time.timeScale = 0.000001f;
+            yield return new WaitForSeconds(p);
+            Time.timeScale = 1;
+            anim.SetInteger("AnimationPar", 1);
+            anim.updateMode = AnimatorUpdateMode.Normal;
+        }
+        //IEnumerator Wait(float time)
+        //{
+            //anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+            //anim.SetInteger("AnimationPar", 2);
+            //Time.timeScale = 0;
+            //anim.Play("Base Layer.Grab", 0, 0f);
+            //anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+            //anim.SetInteger("AnimationPar", 2);
+            //Vector3 startingPos = transform.position;
+            //Vector3 finalPos = transform.position;
+            //float elapsedTime = 0;
+
+            //while (elapsedTime < time)
+            //{
+            //    transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
+            //    elapsedTime += Time.deltaTime;
+            //    yield return null;
+            //}
+            //anim.SetInteger("AnimationPar", 0);
+        //}
+        
         //else
         //{
         //    particleSys.Stop();

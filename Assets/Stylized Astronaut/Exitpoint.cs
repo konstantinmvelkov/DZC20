@@ -33,7 +33,7 @@ public class Exitpoint : MonoBehaviour
         if (CrystalList.Length == 0 && transform.position.x > -0.25 && transform.position.x < 0.25 && transform.position.y > -0.25 && transform.position.y < 0.25 && transform.position.z > -0.25 && transform.position.z < 0.25 && ((transform.rotation.eulerAngles.y < -135 && transform.rotation.eulerAngles.y > -185) || (transform.rotation.eulerAngles.y > 135 && transform.rotation.eulerAngles.y < 185))) 
         {
             s1.movementList.Clear();
-            anim.SetInteger("AnimationPar", 2);
+            anim.SetInteger("AnimationPar", 1);
             StartCoroutine(JumpForward(0.3f));
         }
         IEnumerator JumpForward(float time)

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour
 {
 
-    private Animator anim;
+    public Animator anim;
     private CharacterController controller;
 
     public float speed = 200.0f;
