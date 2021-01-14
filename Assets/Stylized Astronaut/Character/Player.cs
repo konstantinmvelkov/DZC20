@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
     public bool executeSequence = false;
 
-    List<string> alternative;
+    public List<string> alternative;
    /* List<string> movementList = new List<string>();*/
     void Start()
     {
