@@ -51,9 +51,6 @@ public class Player : MonoBehaviour
 
     public IEnumerator ExecuteSequence()
     {
-        //PrintSequence();
-        /*Debug.Log("Adding an extra up move");
-        yield return StartCoroutine(SmoothLerp(0.3f));*/
         if (alternative.Count == 0)
         {
             Debug.Log("No movements in sequence!");
@@ -85,8 +82,9 @@ public class Player : MonoBehaviour
     {
         if (executeSequence == true && !isTranslating)
         {
-            StartCoroutine(ExecuteSequence());
             executeSequence = false;
+            StartCoroutine(ExecuteSequence());
+            Debug.Log("Executing");
         }
         else
         {
@@ -146,7 +144,6 @@ public class Player : MonoBehaviour
         PrintSequence();
         Debug.Log("Starting the sequence");
         executeSequence = true;
-        StartCoroutine(ExecuteSequence());
     }
 
     public void BtnDeletePressed()
