@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Exitpoint : MonoBehaviour
 {
+    Player s1;
+
     private Animator anim;
     private CharacterController controller;
 
@@ -13,9 +15,13 @@ public class Exitpoint : MonoBehaviour
     public int interpolationFramesCount = 45; // Number of frames to completely interpolate between the 2 positions
 
     bool hasentered = false;
+
+    GameObject[] CrystalList;
+
     // Start is called before the first frame update
     void Start()
     {
+        s1 = GetComponent<Player>();
         controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
     }
@@ -23,9 +29,11 @@ public class Exitpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S)) // Placeholder statement
+        CrystalList = GameObject.FindGameObjectsWithTag("Crystal");
+        if (CrystalList.Length == 0 && transform.position.x > -0.25 && transform.position.x < 0.25 && transform.position.y > -0.25 && transform.position.y < 0.25 && transform.position.z > -0.25 && transform.position.z < 0.25 && ((transform.rotation.eulerAngles.y < -135 && transform.rotation.eulerAngles.y > -185) || (transform.rotation.eulerAngles.y > 135 && transform.rotation.eulerAngles.y < 185))) 
         {
-            anim.SetInteger("AnimationPar", 2);
+            s1.movementList.Clear();
+            anim.SetInteger("AnimationPar", 1);
             StartCoroutine(JumpForward(0.3f));
         }
         IEnumerator JumpForward(float time)
