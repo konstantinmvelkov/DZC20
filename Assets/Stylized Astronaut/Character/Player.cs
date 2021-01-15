@@ -86,10 +86,6 @@ public class Player : MonoBehaviour
             StartCoroutine(ExecuteSequence());
             Debug.Log("Executing");
         }
-        else
-        {
-            Debug.Log("Inside Update but translating and/or executeSequence == false");
-        }
 
         //StartCoroutine(ExecuteSequence());
         /*//When G is pressed sequence will start
