@@ -29,7 +29,7 @@ public class Entrypoint : MonoBehaviour
         }
         if (hasentered == false)
         {
-            anim.SetInteger("AnimationPar", 3);
+            anim.SetInteger("AnimationPar", 1);
             StartCoroutine(FallForward(0.3f));
         }
         IEnumerator FallForward(float time)
