@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicController : MonoBehaviour
+public class LogicLevel5 : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject finalPipe;
-    bool firstPipe1 = true;
-    bool firstPipe2 = true;
+    bool firstPipe1 = false;
+    bool firstPipe2 = false;
     public List<string> gatesList = new List<string>();
-/*    string[] gatesArray = new string[1]; */
+    /*    string[] gatesArray = new string[1]; */
     // Update is called once per frame
     void Update()
     {
@@ -45,9 +45,9 @@ public class LogicController : MonoBehaviour
         {
             bool finalValue = false;
 
-            foreach(string gate in gatesList)
+            foreach (string gate in gatesList)
             {
-                if(gate == "And")
+                if (gate == "And")
                 {
                     finalValue = AndFunction(firstPipe1, firstPipe2);
                 }
@@ -64,7 +64,8 @@ public class LogicController : MonoBehaviour
                     finalValue = NorFunction(firstPipe1, firstPipe2);
                 }
             }
-            if (finalValue) {
+            if (finalValue)
+            {
                 //Get the Renderer component from the new cube
                 var pipeRenderer = finalPipe.GetComponent<Renderer>();
 
@@ -73,7 +74,7 @@ public class LogicController : MonoBehaviour
             }
         }
     }
-    bool AndFunction(bool first, bool second) 
+    bool AndFunction(bool first, bool second)
     {
         return (first && second);
     }

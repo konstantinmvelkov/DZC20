@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogiController7 : MonoBehaviour
+public class LogicLevel6 : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject firstLeft;
@@ -133,20 +133,20 @@ public class LogiController7 : MonoBehaviour
                 pipeRenderer.material.SetColor("_Color", Color.yellow);
             }
 
-            if(NorFunction(first,secondF)) 
+            if (NorFunction(first, secondF))
             {
                 afterNorStatus = true;
                 var pipeRenderer = afterNor.GetComponent<Renderer>();
 
                 //Call SetColor using the shader property name "_Color" and setting the color to red
                 pipeRenderer.material.SetColor("_Color", Color.yellow);
-            } 
+            }
             else
             {
                 afterNorStatus = false;
             }
 
-  
+
             final = NandFunction(afterNotStatus, afterNorStatus);
             if (final)
             {

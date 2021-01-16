@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicControllerLevel6 : MonoBehaviour
+public class LogicLevel7 : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject firstFinal;
@@ -60,7 +60,7 @@ public class LogicControllerLevel6 : MonoBehaviour
             pipeRenderer.material.SetColor("_Color", Color.black);
         }
         if (Input.GetKeyDown(KeyCode.G) && gatesList.Count > 0)
-        { 
+        {
 
             if (gatesList[0] == "And")
             {
@@ -79,7 +79,7 @@ public class LogicControllerLevel6 : MonoBehaviour
                 firstF = NorFunction(firstPipe1, firstPipe2);
             }
 
-            if(firstF)
+            if (firstF)
             {
                 var pipeRenderer = firstFinal.GetComponent<Renderer>();
 

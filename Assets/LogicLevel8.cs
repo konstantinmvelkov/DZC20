@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicController9 : MonoBehaviour
+public class LogicLevel8 : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject finalPipe;
-    bool firstPipe1 = false;
-    bool firstPipe2 = false;
+    bool firstPipe1 = true;
+    bool firstPipe2 = true;
     public List<string> gatesList = new List<string>();
     /*    string[] gatesArray = new string[1]; */
     // Update is called once per frame
