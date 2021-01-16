@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 292025865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3d108892b263e4dbfc25dbf21f5b85, type: 3}
+  m_Script: {fileID: 11500000, guid: 84d17e7db906adc4997d396f1e2f9c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finalPipe: {fileID: 402674673}
@@ -4802,7 +4802,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 74435a5176548c242a82b65a9ed7ee7b, type: 2}
+      objectReference: {fileID: 2100000, guid: 18da2ed50890ebc4085ff9bbe248d21f, type: 2}
     - target: {fileID: 6572058385776542888, guid: 80878e4e265f41a468fe596d19b307fc,
         type: 3}
       propertyPath: m_RootOrder
@@ -6026,7 +6026,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 74435a5176548c242a82b65a9ed7ee7b, type: 2}
+      objectReference: {fileID: 2100000, guid: 18da2ed50890ebc4085ff9bbe248d21f, type: 2}
     - target: {fileID: 6572058385776542888, guid: 80878e4e265f41a468fe596d19b307fc,
         type: 3}
       propertyPath: m_RootOrder
