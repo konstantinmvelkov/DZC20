@@ -155,7 +155,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void BtnLastPressed()
+    /*public void BtnLastPressed()
     {
         if (!isTranslating)
         {
@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Translating");
         }
-    }
+    }*/
 
     public void BtnLeftPressed()
     {
