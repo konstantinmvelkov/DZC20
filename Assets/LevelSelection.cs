@@ -33,6 +33,7 @@ public class LevelSelection : MonoBehaviour
 	public Transform lookTarget10;
 	public Transform lookTarget11;
  	public Text Text;
+	public Text Button;
 	
 	private int currenttarget;
 	private Transform cameraTarget;
@@ -71,7 +72,7 @@ public class LevelSelection : MonoBehaviour
 		}
 		if ((Input.GetKeyDown("g")) && currenttarget != 1) //Play selected level
 		{
-			SceneManager.LoadScene(currenttarget);
+			LoadLevel();
 		}
 
 		if (Input.anyKeyDown)
@@ -217,5 +218,13 @@ public class LevelSelection : MonoBehaviour
 	public void PlaySound()
 	{
 		Audio.Play();
+	}
+	public void LoadLevel()
+	{
+		if (currenttarget != 1)
+		{
+			SceneManager.LoadScene(currenttarget);
+		}
+
 	}
 }
