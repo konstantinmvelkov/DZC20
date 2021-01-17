@@ -16,6 +16,8 @@ public class Exitpoint : MonoBehaviour
 
     bool hasentered = false;
 
+    float time = 0;
+
     GameObject[] CrystalList;
 
     // Start is called before the first frame update
@@ -36,6 +38,9 @@ public class Exitpoint : MonoBehaviour
             s1.alternative.Clear();
             anim.SetInteger("AnimationPar", 1);
             StartCoroutine(JumpForward(0.3f));
+            Debug.Log("Exitpoint executed");
+            time += time + Time.deltaTime;
+            Debug.Log(time);
         }
         IEnumerator JumpForward(float time)
         {
