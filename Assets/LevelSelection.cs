@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class LevelSelection : MonoBehaviour
 {
 	
@@ -33,10 +33,11 @@ public class LevelSelection : MonoBehaviour
 	public Transform lookTarget10;
 	public Transform lookTarget11;
  	public Text Text;
-	string TextLine;
 	
 	private int currenttarget;
 	private Transform cameraTarget;
+	private AudioSource Audio;
+	private GameObject Camera;
 
 	
     // Start is called before the first frame update
@@ -45,6 +46,8 @@ public class LevelSelection : MonoBehaviour
         currenttarget = 1;
 		SetCameraTarget(currenttarget);
 		Text = GameObject.Find("Text").GetComponent<UnityEngine.UI.Text>();
+		Camera = GameObject.Find("Main Camera");
+		Audio = Camera.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -66,7 +69,10 @@ public class LevelSelection : MonoBehaviour
 		{
 			DCamera();
 		}
-
+		if ((Input.GetKeyDown("g")) && currenttarget != 1) //Play selected level
+		{
+			SceneManager.LoadScene(currenttarget);
+		}
 
 		if (Input.anyKeyDown)
 		{
@@ -77,7 +83,7 @@ public class LevelSelection : MonoBehaviour
 		}
 		if (currenttarget == 1)
 		{
-			Text.text = "Martian Base";
+			Text.text = "Martian Base: Select which level you want to play.";
 		}
 		if (currenttarget == 2)
 		{
@@ -89,35 +95,35 @@ public class LevelSelection : MonoBehaviour
 		}
 		if (currenttarget == 4)
 		{
-			Text.text = "Level 3a: (A series continues on crystals)";
+			Text.text = "Level 3: ...";
 		}
 		if (currenttarget == 5)
 		{
-			Text.text = "Level 4a";
+			Text.text = "Level 4: ";
 		}
 		if (currenttarget == 6)
 		{
-			Text.text = "Level 5a";
+			Text.text = "Level 5: ...";
 		}
 		if (currenttarget == 7)
 		{
-			Text.text = "Level 6a";
+			Text.text = "Level 6: Not made yet";
 		}
 		if (currenttarget == 8)
 		{
-			Text.text = "Level 3b";
+			Text.text = "Level 7: Continuation on Circuits";
 		}
 		if (currenttarget == 9)
 		{
-			Text.text = "Level 4b";
+			Text.text = "Level 8: ...";
 		}
 		if (currenttarget == 10)
 		{
-			Text.text = "Level 5b";
+			Text.text = "Level 9: ...";
 		}
 		if (currenttarget == 11)
 		{
-			Text.text = "Level 6b";
+			Text.text = "Level 10: ...";
 		}
 
     }
@@ -182,8 +188,10 @@ public class LevelSelection : MonoBehaviour
 		if(currenttarget < 11)
 			currenttarget++;
 		else 
-			currenttarget = 1;
+			currenttarget = 11;
 		SetCameraTarget(currenttarget);
+		PlaySound();
+
 	}
 	public void DownCamera(){
 		if(currenttarget > 1)
@@ -191,15 +199,23 @@ public class LevelSelection : MonoBehaviour
 		else 
 			currenttarget = 1;
 		SetCameraTarget(currenttarget);
+		PlaySound();
 	}
 	public void DCamera(){
 		if(currenttarget == 3)
 			currenttarget = 8;
 		SetCameraTarget(currenttarget);
+		PlaySound();
 	}
 	public void SkipCamera(){
 		if(currenttarget == 8)
 			currenttarget = 3;
 		SetCameraTarget(currenttarget);
+		PlaySound();
+	}
+
+	public void PlaySound()
+	{
+		Audio.Play();
 	}
 }
