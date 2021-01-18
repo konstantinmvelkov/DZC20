@@ -62,16 +62,19 @@ public class Player : MonoBehaviour
                 if (element.Equals("w"))
                 {
                     Debug.Log("Starting W");
+                    anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(SmoothLerp(0.3f));
                 }
                 else if (element.Equals("a"))
                 {
                     Debug.Log("Starting A");
+                    anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(Rotate(Vector3.up, -90, 0.2f));
                 }
                 else if (element.Equals("d"))// && !isTranslating)
                 {
                     Debug.Log("Starting D");
+                    anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(Rotate(Vector3.up, 90, 0.2f));
                 }
             }
@@ -221,7 +224,7 @@ public class Player : MonoBehaviour
     }
     public IEnumerator SmoothLerp(float time)
     {
-        anim.SetInteger("AnimationPar", 1);
+        //anim.SetInteger("AnimationPar", 1);
         isTranslating = true;
         stepCount++;
         /*anim.SetInteger("AnimationPar", 1);*/
@@ -265,12 +268,12 @@ public class Player : MonoBehaviour
         Debug.Log(transform.position);
         Debug.Log(isTranslating);
         isTranslating = false;
-        anim.SetInteger("AnimationPar", 0);
+        //anim.SetInteger("AnimationPar", 0);
         /*anim.SetInteger("AnimationPar", 0);*/
     }
     public IEnumerator Rotate(Vector3 axis, float angle, float duration = 1.0f)
     {
-        anim.SetInteger("AnimationPar", 1);
+        //anim.SetInteger("AnimationPar", 1);
         isTranslating = true;
         stepCount++;
         /*anim.SetInteger("AnimationPar", 1);*/
@@ -288,7 +291,7 @@ public class Player : MonoBehaviour
         isTranslating = false;
        /* anim.SetInteger("AnimationPar", 0);*/
         transform.rotation = to;
-        anim.SetInteger("AnimationPar", 0);
+        //anim.SetInteger("AnimationPar", 0);
     }
     private void HeightCheck() //not used right now
     {
