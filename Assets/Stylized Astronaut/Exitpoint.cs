@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exitpoint : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class Exitpoint : MonoBehaviour
         {
             //s1.movementList.Clear();
             s1.alternative.Clear();
+            savelevel();
             anim.SetInteger("AnimationPar", 1);
             StartCoroutine(JumpForward(0.3f));
             Debug.Log("Exitpoint executed");
@@ -57,5 +59,32 @@ public class Exitpoint : MonoBehaviour
             hasentered = true;
             anim.SetInteger("AnimationPar", 0);
         }
+    }
+
+    void savelevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if (sceneName == "Level 1") 
+        {
+            PlayerPrefs.SetInt("level1", 1);
+        }
+        else if (sceneName == "Level 3")
+        {
+            PlayerPrefs.SetInt("level3", 1);
+        }
+        else if (sceneName == "Level 4")
+        {
+            PlayerPrefs.SetInt("level4", 4);
+        }
+        else if (sceneName == "Level 5")
+        {
+            PlayerPrefs.SetInt("level5", 3);
+        }
+        else if (sceneName == "Level 6")
+        {
+            PlayerPrefs.SetInt("level6", 2);
+        }
+        PlayerPrefs.Save();
     }
 }

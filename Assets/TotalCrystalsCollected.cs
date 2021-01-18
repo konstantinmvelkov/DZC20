@@ -10,7 +10,7 @@ public class TotalCrystalsCollected : MonoBehaviour
     public Text Text;
     void Start()
     {
-        CrystalSum = 0;
+        CrystalSum = PlayerPrefs.GetInt("level1")+PlayerPrefs.GetInt("level3")+PlayerPrefs.GetInt("level4")+PlayerPrefs.GetInt("level5")+PlayerPrefs.GetInt("level6");
 		Text = GameObject.Find("TotalCrystalsCollected").GetComponent<UnityEngine.UI.Text>();
     }
 
@@ -18,7 +18,7 @@ public class TotalCrystalsCollected : MonoBehaviour
     void Update()
     {
         //Here we need to count all crystals from all completed levels together.
-        Text.text = "You have collected " + CrystalSum.ToString() + "/x crystals.";
+        Text.text = "You have collected " + CrystalSum.ToString() + "/11 crystals.";
         
     }
 }
