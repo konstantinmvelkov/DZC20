@@ -12,7 +12,7 @@ public class Entrypoint : MonoBehaviour
     public float gravity = 20.0f;
     public int interpolationFramesCount = 45; // Number of frames to completely interpolate between the 2 positions
 
-    bool hasentered = true;
+    bool hasentered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +27,10 @@ public class Entrypoint : MonoBehaviour
         {   
             hasentered = false;
         }
+        else
+        {
+            hasentered = true;
+        }    
         if (hasentered == false)
         {
             anim.SetInteger("AnimationPar", 1);
