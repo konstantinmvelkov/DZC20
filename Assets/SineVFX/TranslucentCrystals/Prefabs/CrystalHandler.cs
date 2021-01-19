@@ -7,7 +7,7 @@ public class CrystalHandler : MonoBehaviour
 {
     public Animator anim;
     public int CrystalCount;
-    GameObject[] CrystalList;
+    public GameObject[] CrystalList;
 
     public int TotalCrystals;
 

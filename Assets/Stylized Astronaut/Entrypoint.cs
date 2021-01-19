@@ -35,7 +35,7 @@ public class Entrypoint : MonoBehaviour
         {
             anim.SetInteger("AnimationPar", 1);
             StartCoroutine(FallForward(0.3f));
-            Debug.Log("EntryPoint Executed");
+            //Debug.Log("EntryPoint Executed");
         }
         IEnumerator FallForward(float time)
         {

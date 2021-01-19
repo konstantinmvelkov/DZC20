@@ -1166,8 +1166,8 @@ GameObject:
   - component: {fileID: 713871721}
   - component: {fileID: 713871720}
   m_Layer: 0
-  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P (4)
-  m_TagString: Untagged
+  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P2
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1610,7 +1610,7 @@ GameObject:
   - component: {fileID: 896809239}
   m_Layer: 0
   m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,8 +1734,8 @@ GameObject:
   - component: {fileID: 911113370}
   - component: {fileID: 911113369}
   m_Layer: 0
-  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P (17)
-  m_TagString: Untagged
+  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P3
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2082,8 +2082,8 @@ GameObject:
   - component: {fileID: 1357711482}
   - component: {fileID: 1357711481}
   m_Layer: 0
-  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P (18)
-  m_TagString: Untagged
+  m_Name: SM_PolygonPrototype_Buildings_Block_1x1_01P4
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

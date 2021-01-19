@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public bool UpLastTick = true;
     public bool DownLastTick = false;
 
+    public bool LevelFailed = false;
+
     [SerializeField] Button btnUp;
     [SerializeField] Button btnLeft;
     [SerializeField] Button btnRight;
@@ -53,7 +55,7 @@ public class Player : MonoBehaviour
     {
         if (alternative.Count == 0)
         {
-            Debug.Log("No movements in sequence!");
+            //Debug.Log("No movements in sequence!");
         }
         else
         {
@@ -61,19 +63,19 @@ public class Player : MonoBehaviour
             {
                 if (element.Equals("w"))
                 {
-                    Debug.Log("Starting W");
+                    //Debug.Log("Starting W");
                     anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(SmoothLerp(0.3f));
                 }
                 else if (element.Equals("a"))
                 {
-                    Debug.Log("Starting A");
+                    //Debug.Log("Starting A");
                     anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(Rotate(Vector3.up, -90, 0.2f));
                 }
                 else if (element.Equals("d"))// && !isTranslating)
                 {
-                    Debug.Log("Starting D");
+                    //Debug.Log("Starting D");
                     anim.SetInteger("AnimationPar", 1);
                     yield return StartCoroutine(Rotate(Vector3.up, 90, 0.2f));
                 }
@@ -87,61 +89,61 @@ public class Player : MonoBehaviour
         {
             executeSequence = false;
             StartCoroutine(ExecuteSequence());
-            Debug.Log("Executing");
+            //Debug.Log("Executing");
         }
 
         //StartCoroutine(ExecuteSequence());
         /*//When G is pressed sequence will start
         if (Input.GetKeyDown(KeyCode.G) && !isTranslating)
         {
-            Debug.Log("Starting the sequence");
+            //Debug.Log("Starting the sequence");
             StartCoroutine(ExecuteSequence());
         }
         //When H is pressed sequence is deleted
         if (Input.GetKeyDown(KeyCode.H) && !isTranslating)
         {
-            Debug.Log("Sequence deleted");
+            //Debug.Log("Sequence deleted");
             movementList.Clear();
         }
         //When R is pressed last is removed
         if (Input.GetKeyDown(KeyCode.R) && !isTranslating)
         {
-            Debug.Log("Last element removed");
+            //Debug.Log("Last element removed");
             movementList.RemoveAt(movementList.Count - 1);
         }
         if (Input.GetKeyDown(KeyCode.A) && !isTranslating)
         {
             movementList.Add("a");
-            Debug.Log("Added element a");
+            //Debug.Log("Added element a");
         }
         if (Input.GetKeyDown(KeyCode.D) && !isTranslating)
         {
             movementList.Add("d");
-            Debug.Log("Added element d");
+            //Debug.Log("Added element d");
         }
         if (Input.GetKeyDown(KeyCode.W) && !isTranslating)
         {
             movementList.Add("w");
-            Debug.Log("Added element w");
+            //Debug.Log("Added element w");
         }*/
     }
     public void PrintSequence()
     {
         if(alternative.Count == 0)
         {
-            Debug.LogError("EMPTY MOVEMENTLIST!");
+            //Debug.LogError("EMPTY MOVEMENTLIST!");
             return;
         }
         foreach (string movement in alternative)
         {
-            Debug.Log(movement);
+            //Debug.Log(movement);
         }
     }
 
     public void BtnGoPressed()
     {
         PrintSequence();
-        Debug.Log("Starting the sequence");
+        //Debug.Log("Starting the sequence");
         executeSequence = true;
     }
 
@@ -150,11 +152,11 @@ public class Player : MonoBehaviour
         if (!isTranslating)
         {
             alternative.Clear();
-            Debug.Log("Btn Delete was pressed");
+            //Debug.Log("Btn Delete was pressed");
         }
         else
         {
-            Debug.Log("Translating");
+            //Debug.Log("Translating");
         }
     }
 
@@ -163,11 +165,11 @@ public class Player : MonoBehaviour
         if (!isTranslating)
         {
             alternative.RemoveAt(alternative.Count - 1);
-            Debug.Log("Last element removed");
+            //Debug.Log("Last element removed");
         }
         else
         {
-            Debug.Log("Translating");
+            //Debug.Log("Translating");
         }
     }*/
 
@@ -176,11 +178,11 @@ public class Player : MonoBehaviour
         if (!isTranslating)
         {
             alternative.Add("a");
-            Debug.Log("Btn Left was pressed");
+            //Debug.Log("Btn Left was pressed");
         }
         else
         {
-            Debug.Log("Translating");
+            //Debug.Log("Translating");
         }
     }
 
@@ -189,11 +191,11 @@ public class Player : MonoBehaviour
         if (!isTranslating)
         {
             alternative.Add("w");
-            Debug.Log("Btn Up was pressed");
+            //Debug.Log("Btn Up was pressed");
         }
         else
         {
-            Debug.Log("Translating");
+            //Debug.Log("Translating");
         }
         PrintSequence();
     }
@@ -203,18 +205,18 @@ public class Player : MonoBehaviour
         if (!isTranslating)
         {
             alternative.Add("d");
-            Debug.Log("Btn right was pressed");
+            //Debug.Log("Btn right was pressed");
         }
         else
         {
-            Debug.Log("Translating");
+            //Debug.Log("Translating");
         }
         PrintSequence();
     }
 
     public IEnumerator RunSquence()
     {
-        Debug.Log("Inside RunSequence");
+        //Debug.Log("Inside RunSequence");
 
         yield return StartCoroutine(SmoothLerp(0.3f));
 
@@ -232,8 +234,8 @@ public class Player : MonoBehaviour
 
         Vector3 finalPos = transform.position + transform.forward;
 
-        Debug.Log(startingPos);
-        Debug.Log(finalPos);
+        //Debug.Log(startingPos);
+        //Debug.Log(finalPos);
 
         Collider[] Intersecting = Physics.OverlapSphere(startingPos, 0.1f); // This detects intersecting objects including the plate that indicates stairs
                                                                             // Might have to change the value if we use a different model for the robot...
@@ -242,18 +244,32 @@ public class Player : MonoBehaviour
         {
             for (var i = 0; i < Intersecting.Length; i++)
             {
-                Debug.Log(Intersecting[0].name);
+                //Debug.Log(Intersecting[0].name);
                 if (Intersecting[i].tag == "StairsUp" && transform.eulerAngles == Intersecting[i].transform.eulerAngles) //Stairs up condition
                 {
                     finalPos = transform.position + transform.forward + 0.25f * transform.up; //Modify final pos to include height difference
-                    Debug.Log(Intersecting[i].name);
+                    //Debug.Log(Intersecting[i].name);
                 }
                 if (Intersecting[i].tag == "StairsDown" && transform.eulerAngles == Intersecting[i].transform.eulerAngles) //Stairs down condition
                 {
                     finalPos = transform.position + transform.forward - 0.25f * transform.up; //Modify final pos to include height difference
-                    Debug.Log(Intersecting[i].name);
+                    //Debug.Log(Intersecting[i].name);
                 }
             }
+        Collider[] Intersecting2 = Physics.OverlapSphere(finalPos, 0.2f); // This detects intersecting objects including the plate that indicates stairs
+                                                                            // Might have to change the value if we use a different model for the robot...
+        //Debug.Log(Intersecting2.Length);
+        if (Intersecting2.Length > 0) //This is true if there are intersecting objects nearby, triggers, crystals etc..
+        {
+            //Debug.Log("ON BLOCK");
+        }
+        else
+        {
+            LevelFailed = true;
+            Debug.Log("Level Failed");
+        }
+
+
 
         }
 
@@ -265,8 +281,8 @@ public class Player : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        Debug.Log(transform.position);
-        Debug.Log(isTranslating);
+        //Debug.Log(transform.position);
+        //Debug.Log(isTranslating);
         isTranslating = false;
         //anim.SetInteger("AnimationPar", 0);
         /*anim.SetInteger("AnimationPar", 0);*/
@@ -295,11 +311,11 @@ public class Player : MonoBehaviour
     }
     private void HeightCheck() //not used right now
     {
-        Debug.Log("Raycast script running");
+        //Debug.Log("Raycast script running");
         Vector3 origin = transform.position + 0.5f*transform.up;
         Vector3 direction = -transform.up;
-        Debug.Log(origin);
-        Debug.Log(direction);
+        //Debug.Log(origin);
+        //Debug.Log(direction);
         Debug.DrawRay(origin, direction * 10f, Color.red);
         Ray ray = new Ray(origin, direction);
         if (Physics.Raycast(origin, direction, 0.6f) && !UpLastTick)

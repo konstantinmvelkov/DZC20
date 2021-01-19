@@ -77,9 +77,9 @@ public class LevelSelection : MonoBehaviour
 
 		if (Input.anyKeyDown)
 		{
-			Debug.Log(currenttarget);
-			Debug.Log(cameraTarget.name);
-			Debug.Log(lookTarget.name);
+			//Debug.Log(currenttarget);
+			//Debug.Log(cameraTarget.name);
+			//Debug.Log(lookTarget.name);
 
 		}
 		if (currenttarget == 1)
