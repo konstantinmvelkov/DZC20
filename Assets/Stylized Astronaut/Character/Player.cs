@@ -32,6 +32,10 @@ public class Player : MonoBehaviour
     [SerializeField] Button btnGo;
     [SerializeField] Button btnDelete;
 
+    [SerializeField] GameObject textLevelFailed;
+    [SerializeField] GameObject inLevelMenu;
+    [SerializeField] GameObject btnCancel;
+
     public bool executeSequence = false;
 
     public List<string> alternative;
@@ -266,6 +270,9 @@ public class Player : MonoBehaviour
         else
         {
             LevelFailed = true;
+            inLevelMenu.SetActive(true);
+            textLevelFailed.SetActive(true);
+            btnCancel.SetActive(false);
             Debug.Log("Level Failed");
         }
 
