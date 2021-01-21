@@ -2229,9 +2229,24 @@ PrefabInstance:
       objectReference: {fileID: 351821730}
     - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
         type: 3}
+      propertyPath: btnCancel
+      value: 
+      objectReference: {fileID: 2084744805}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
       propertyPath: btnDelete
       value: 
       objectReference: {fileID: 488050066}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: inLevelMenu
+      value: 
+      objectReference: {fileID: 2084744807}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: textLevelFailed
+      value: 
+      objectReference: {fileID: 2084744808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
 --- !u!33 &503790221
@@ -5111,6 +5126,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 2084744807}
+  cancelButton: {fileID: 2084744805}
+  cogratsText: {fileID: 2084744806}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!4 &1198530230
@@ -6444,6 +6462,9 @@ MonoBehaviour:
   anim: {fileID: 1468207207}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 0}
+  cancelButton: {fileID: 0}
+  cogratsText: {fileID: 0}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!114 &1468207209
@@ -8329,6 +8350,30 @@ PrefabInstance:
 --- !u!224 &2084744804 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2438590365057040586, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084744803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2084744805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364111101689, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084744803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2084744806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3240795238421119409, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084744803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2084744807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364429594748, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084744803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2084744808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7487757826433724641, guid: a0e0151dd1643aa4a8295529dfbeb12e,
     type: 3}
   m_PrefabInstance: {fileID: 2084744803}
   m_PrefabAsset: {fileID: 0}

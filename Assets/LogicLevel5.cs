@@ -94,7 +94,7 @@ public class LogicLevel5 : MonoBehaviour
 
     public void BtnGoClicked()
     {
-        if (gatesList.Count > 0)
+        if (gatesList.Count == 1)
         {
             bool finalValue = false;
 

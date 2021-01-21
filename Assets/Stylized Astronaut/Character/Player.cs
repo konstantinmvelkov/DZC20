@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        anim.SetInteger("AnimationPar", 0);
         isTranslating = false;
     }
     void Update()

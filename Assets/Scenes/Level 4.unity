@@ -1000,6 +1000,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 467183908}
+  cancelButton: {fileID: 467183906}
+  cogratsText: {fileID: 467183907}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!114 &196923739
@@ -1544,6 +1547,30 @@ PrefabInstance:
 --- !u!224 &467183905 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2438590365057040586, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 467183904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &467183906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364111101689, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 467183904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &467183907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3240795238421119409, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 467183904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &467183908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364429594748, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 467183904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &467183909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7487757826433724641, guid: a0e0151dd1643aa4a8295529dfbeb12e,
     type: 3}
   m_PrefabInstance: {fileID: 467183904}
   m_PrefabAsset: {fileID: 0}
@@ -3450,9 +3477,24 @@ PrefabInstance:
       objectReference: {fileID: 372886895}
     - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
         type: 3}
+      propertyPath: btnCancel
+      value: 
+      objectReference: {fileID: 467183906}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
       propertyPath: btnDelete
       value: 
       objectReference: {fileID: 214810434}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: inLevelMenu
+      value: 
+      objectReference: {fileID: 467183908}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: textLevelFailed
+      value: 
+      objectReference: {fileID: 467183909}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
 --- !u!1 &1387422295 stripped
@@ -3482,6 +3524,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 0}
+  cancelButton: {fileID: 0}
+  cogratsText: {fileID: 0}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!114 &1387422298

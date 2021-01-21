@@ -2758,9 +2758,24 @@ PrefabInstance:
       objectReference: {fileID: 145781102}
     - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
         type: 3}
+      propertyPath: btnCancel
+      value: 
+      objectReference: {fileID: 1742723915}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
       propertyPath: btnDelete
       value: 
       objectReference: {fileID: 1646949992}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: inLevelMenu
+      value: 
+      objectReference: {fileID: 1742723917}
+    - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f,
+        type: 3}
+      propertyPath: textLevelFailed
+      value: 
+      objectReference: {fileID: 1809244733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
 --- !u!95 &1689330503 stripped
@@ -2891,6 +2906,24 @@ PrefabInstance:
 --- !u!224 &1742723914 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2438590365057040586, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742723913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742723915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364111101689, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742723913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742723916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3240795238421119409, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742723913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742723917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2438590364429594748, guid: a0e0151dd1643aa4a8295529dfbeb12e,
     type: 3}
   m_PrefabInstance: {fileID: 1742723913}
   m_PrefabAsset: {fileID: 0}
@@ -3071,6 +3104,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 1742723917}
+  cancelButton: {fileID: 1742723915}
+  cogratsText: {fileID: 1742723916}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!114 &1800995957
@@ -3123,6 +3159,12 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1809244733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7487757826433724641, guid: a0e0151dd1643aa4a8295529dfbeb12e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742723913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1809877758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1147752367711628, guid: 2abf19653d633114faedf3b60dc6c39f,
@@ -3188,6 +3230,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   CrystalCount: 0
   CrystalList: []
+  inLevelMenu: {fileID: 0}
+  cancelButton: {fileID: 0}
+  cogratsText: {fileID: 0}
   TotalCrystals: 0
   FillSpeed: 0
 --- !u!82 &1809877763

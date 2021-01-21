@@ -9,6 +9,10 @@ public class CrystalHandler : MonoBehaviour
     public int CrystalCount;
     public GameObject[] CrystalList;
 
+    [SerializeField] GameObject inLevelMenu;
+    [SerializeField] GameObject cancelButton;
+    [SerializeField] GameObject cogratsText;
+
     public int TotalCrystals;
 
     Text text;
@@ -109,5 +113,8 @@ public class CrystalHandler : MonoBehaviour
     public void victory()
     {
         //Put here what needs to happen when the player completes the level
+        inLevelMenu.SetActive(true);
+        cancelButton.SetActive(false);
+        cogratsText.SetActive(true);
     }
 }
