@@ -34,7 +34,9 @@ public class LevelSelection : MonoBehaviour
 	public Transform lookTarget11;
  	public Text Text;
 	public Text Button;
-	
+
+	public GameObject PlayButton;
+
 	private int currenttarget;
 	private Transform cameraTarget;
 	private AudioSource Audio;
@@ -84,46 +86,57 @@ public class LevelSelection : MonoBehaviour
 		}
 		if (currenttarget == 1)
 		{
-			Text.text = "Martian Base: Select which level you want to play.";
+			PlayButton.SetActive(false);
+			Text.text = "Martian Base: Select which level you want to play. Select with W and S.";
 		}
 		if (currenttarget == 2)
 		{
-			Text.text = "Level 1: Introduction Crystals";
+			PlayButton.SetActive(true);
+			Text.text = "Level 1";
 		}
 		if (currenttarget == 3)
 		{
-			Text.text = "Level 2: Introduction Logical Circuits";
+			PlayButton.SetActive(true);
+			Text.text = "Level 2";
 		}
 		if (currenttarget == 4)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 3";
 		}
 		if (currenttarget == 5)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 4";
 		}
 		if (currenttarget == 6)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 5";
 		}
 		if (currenttarget == 7)
 		{
-			Text.text = "Level 6: NOT MADE";
+			PlayButton.SetActive(true);
+			Text.text = "Level 6";
 		}
 		if (currenttarget == 8)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 7";
 		}
 		if (currenttarget == 9)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 8";
 		}
 		if (currenttarget == 10)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 9";
 		}
 		if (currenttarget == 11)
 		{
+			PlayButton.SetActive(true);
 			Text.text = "Level 10";
 		}
 

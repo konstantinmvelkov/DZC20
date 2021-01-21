@@ -10,7 +10,16 @@ public class TotalCrystalsCollected : MonoBehaviour
     public Text Text;
     void Start()
     {
-        CrystalSum = PlayerPrefs.GetInt("level1")+PlayerPrefs.GetInt("level2")+PlayerPrefs.GetInt("level3")+PlayerPrefs.GetInt("level4")+PlayerPrefs.GetInt("level5")+PlayerPrefs.GetInt("level7")+PlayerPrefs.GetInt("level8")+PlayerPrefs.GetInt("level9")+PlayerPrefs.GetInt("level10");
+        CrystalSum = PlayerPrefs.GetInt("level1")
+            +PlayerPrefs.GetInt("level2")
+            +PlayerPrefs.GetInt("level3")
+            +PlayerPrefs.GetInt("level4")
+            +PlayerPrefs.GetInt("level5")
+            +PlayerPrefs.GetInt("level7")
+            +PlayerPrefs.GetInt("level8")
+            +PlayerPrefs.GetInt("level9")
+            +PlayerPrefs.GetInt("level10");
+
 		Text = GameObject.Find("TotalCrystalsCollected").GetComponent<UnityEngine.UI.Text>();
     }
 

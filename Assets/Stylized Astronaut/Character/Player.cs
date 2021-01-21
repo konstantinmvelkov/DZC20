@@ -96,7 +96,12 @@ public class Player : MonoBehaviour
             StartCoroutine(ExecuteSequence());
             //Debug.Log("Executing");
         }
-
+        if(inLevelMenu.activeSelf == true)
+        {
+            Debug.LogWarning("IN HERE");
+            anim.SetInteger("AnimationPar", 0);
+            alternative.Clear();
+        }
         //StartCoroutine(ExecuteSequence());
         /*//When G is pressed sequence will start
         if (Input.GetKeyDown(KeyCode.G) && !isTranslating)
