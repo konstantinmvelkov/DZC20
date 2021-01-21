@@ -231,4 +231,8 @@ public class LevelSelection : MonoBehaviour
 	{
 		SceneManager.LoadScene(1);
 	}
+	public void LoadMainMenu()
+	{
+		SceneManager.LoadScene(0);
+	}
 }

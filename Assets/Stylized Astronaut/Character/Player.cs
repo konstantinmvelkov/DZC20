@@ -275,6 +275,8 @@ public class Player : MonoBehaviour
             textLevelFailed.SetActive(true);
             btnCancel.SetActive(false);
             Debug.Log("Level Failed");
+            anim.SetInteger("AnimationPar", 0);
+            alternative.Clear();
         }
 
 
