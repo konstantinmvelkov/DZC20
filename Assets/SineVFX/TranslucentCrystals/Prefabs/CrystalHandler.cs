@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CrystalHandler : MonoBehaviour
 {
@@ -116,5 +117,53 @@ public class CrystalHandler : MonoBehaviour
         inLevelMenu.SetActive(true);
         cancelButton.SetActive(false);
         cogratsText.SetActive(true);
+        savelevel();
+    }
+
+    void savelevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if (sceneName == "Level 1") 
+        {
+            PlayerPrefs.SetInt("level1", 1);
+        }
+        else if (sceneName == "Level 2")
+        {
+            PlayerPrefs.SetInt("level2", 1);
+        }
+        else if (sceneName == "Level 3")
+        {
+            PlayerPrefs.SetInt("level3", 1);
+        }
+        else if (sceneName == "Level 4")
+        {
+            PlayerPrefs.SetInt("level4", 4);
+        }
+        else if (sceneName == "Level 5")
+        {
+            PlayerPrefs.SetInt("level5", 3);
+        }
+        else if (sceneName == "Level 6")
+        {
+            PlayerPrefs.SetInt("level6", 2);
+        }
+        else if (sceneName == "Level 7")
+        {
+            PlayerPrefs.SetInt("level7", 1);
+        }
+        else if (sceneName == "Level 8")
+        {
+            PlayerPrefs.SetInt("level8", 1);
+        }
+        else if (sceneName == "Level 9")
+        {
+            PlayerPrefs.SetInt("level9", 1);
+        }
+        else if (sceneName == "Level 10")
+        {
+            PlayerPrefs.SetInt("level10", 1);
+        }
+        PlayerPrefs.Save();
     }
 }

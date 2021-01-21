@@ -69,6 +69,10 @@ public class Exitpoint : MonoBehaviour
         {
             PlayerPrefs.SetInt("level1", 1);
         }
+        else if (sceneName == "Level 2")
+        {
+            PlayerPrefs.SetInt("level2", 1);
+        }
         else if (sceneName == "Level 3")
         {
             PlayerPrefs.SetInt("level3", 1);
@@ -84,6 +88,22 @@ public class Exitpoint : MonoBehaviour
         else if (sceneName == "Level 6")
         {
             PlayerPrefs.SetInt("level6", 2);
+        }
+        else if (sceneName == "Level 7")
+        {
+            PlayerPrefs.SetInt("level7", 1);
+        }
+        else if (sceneName == "Level 8")
+        {
+            PlayerPrefs.SetInt("level8", 1);
+        }
+        else if (sceneName == "Level 9")
+        {
+            PlayerPrefs.SetInt("level9", 1);
+        }
+        else if (sceneName == "Level 10")
+        {
+            PlayerPrefs.SetInt("level10", 1);
         }
         PlayerPrefs.Save();
     }
