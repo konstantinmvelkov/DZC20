@@ -125,9 +125,12 @@ public class LogicLevel8 : MonoBehaviour
 
                 //Call SetColor using the shader property name "_Color" and setting the color to red
                 pipeRenderer.material.SetColor("_Color", Color.yellow);
+                GameObject.Find("Sphere").SetActive(false);
+                GameObject.Find("Crystalsv05").SetActive(false);
             }
-        }    
+        }
     }
+
 
     // Update is called once per frame
     /* void Update()

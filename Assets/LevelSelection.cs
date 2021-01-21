@@ -227,4 +227,8 @@ public class LevelSelection : MonoBehaviour
 		}
 
 	}
+	public void LoadLevelSelect()
+	{
+		SceneManager.LoadScene(1);
+	}
 }

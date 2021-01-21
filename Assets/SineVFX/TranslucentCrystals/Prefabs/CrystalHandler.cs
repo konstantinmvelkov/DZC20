@@ -63,6 +63,13 @@ public class CrystalHandler : MonoBehaviour
             
             //StartCoroutine(Wait(0.3f));
         }
+        if (CrystalList.Length == 0)
+        {
+            victory();
+            GameObject.Find("InLevelMenu").SetActive(true);
+            Debug.Log("level completed");
+        }
+
 
         IEnumerator Pause(float p)
         {
@@ -98,5 +105,9 @@ public class CrystalHandler : MonoBehaviour
         //    particleSys.Stop();
         //}
         //Debug.Log(sliderprogress/slidersize);
+    }
+    public void victory()
+    {
+        //Put here what needs to happen when the player completes the level
     }
 }
