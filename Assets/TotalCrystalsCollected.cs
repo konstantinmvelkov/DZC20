@@ -18,7 +18,7 @@ public class TotalCrystalsCollected : MonoBehaviour
     void Update()
     {
         //Here we need to count all crystals from all completed levels together.
-        Text.text = "You have collected " + CrystalSum.ToString() + "/11 crystals.";
+        Text.text = "You have collected " + CrystalSum.ToString() + "/14 crystals.";
         
     }
 }

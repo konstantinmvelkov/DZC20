@@ -96,35 +96,35 @@ public class LevelSelection : MonoBehaviour
 		}
 		if (currenttarget == 4)
 		{
-			Text.text = "Level 3: ...";
+			Text.text = "Level 3";
 		}
 		if (currenttarget == 5)
 		{
-			Text.text = "Level 4: ";
+			Text.text = "Level 4";
 		}
 		if (currenttarget == 6)
 		{
-			Text.text = "Level 5: ...";
+			Text.text = "Level 5";
 		}
 		if (currenttarget == 7)
 		{
-			Text.text = "Level 6: Not made yet";
+			Text.text = "Level 6: NOT MADE";
 		}
 		if (currenttarget == 8)
 		{
-			Text.text = "Level 7: Continuation on Circuits";
+			Text.text = "Level 7";
 		}
 		if (currenttarget == 9)
 		{
-			Text.text = "Level 8: ...";
+			Text.text = "Level 8";
 		}
 		if (currenttarget == 10)
 		{
-			Text.text = "Level 9: ...";
+			Text.text = "Level 9";
 		}
 		if (currenttarget == 11)
 		{
-			Text.text = "Level 10: ...";
+			Text.text = "Level 10";
 		}
 
     }
